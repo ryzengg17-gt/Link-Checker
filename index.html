@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Safety Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container fade-in">
+        <h1 class="glow">🔒 Link Safety Checker</h1>
+        <p class="subtitle">Cek apakah link yang kamu terima aman atau berpotensi penipuan.</p>
+
+        <div class="input-box slide-up">
+            <input id="urlInput" type="text" placeholder="Tempel link di sini...">
+            <button onclick="checkURL()">Cek Keamanan</button>
+        </div>
+
+        <div id="result" class="result hide pop"></div>
+
+        <h2 class="detail-title hide" id="detailTitle">🔍 Hasil Analisis Lengkap</h2>
+        <div id="analysis" class="analysis hide pop"></div>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
