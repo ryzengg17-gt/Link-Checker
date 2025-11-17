@@ -5,13 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cyber Link Checker</title>
 <link rel="stylesheet" href="style.css">
+
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <!-- html5-qrcode -->
 <script src="https://unpkg.com/html5-qrcode"></script>
 </head>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsqr/1.4.0/jsQR.min.js"></script>
+
 <body>
+
 <div class="container">
 
   <h1 class="title">CYBER LINK CHECKER</h1>
@@ -23,7 +28,7 @@
 
     <div class="qr-buttons">
       <label class="btn-secondary">
-        <input type="file" id="qrFile" accept="image/*" hidden>
+        <input type="file" id="qrFile" hidden accept="image/*">
         <i class="fa fa-image"></i> Scan Gambar
       </label>
 
@@ -32,22 +37,19 @@
       </button>
     </div>
 
-    <div id="qrPreview" class="hidden">
-      <img id="qrImage" class="qr-img hidden">
-      <canvas id="qrCanvas" class="qr-canvas hidden"></canvas>
-      <div id="qrResult" class="hidden">
-        <p id="qrText"></p>
-        <div id="qrAction"></div>
-      </div>
-    </div>
+    <div id="qrPreview" class="hidden"></div>
   </div>
 
   <div id="resultCard" class="card hidden">
     <div id="statusBadge" class="badge">Status</div>
-    <h2 class="score"><span id="scoreValue">0</span>/100</h2>
+
+    <h2 class="score">
+      <span id="scoreValue">0</span>/100
+    </h2>
+
     <p id="scoreDesc" class="desc"></p>
 
-    <div id="analysisBox" class="analysis hidden">
+    <div class="analysis hidden" id="analysisBox">
       <h3>Analisis Detail</h3>
       <ul id="analysisList"></ul>
     </div>
